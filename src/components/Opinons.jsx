@@ -31,7 +31,6 @@ const Opinons = () => {
   const currentPageData = newsdata.slice(offset, offset + PER_PAGE).map((item, index) => {
       const {title, author,publishedAt, description, image} = item;
       const formatDate = Moment(publishedAt).format("MMM Do YY");
-      console.log(newsdata)
 
       return (
         <Link to={`/posts/${index}`} key={index} className="post" >

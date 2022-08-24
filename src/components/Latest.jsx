@@ -5,6 +5,9 @@ import Moment from 'moment'
 
 const Latest = () => {
   const {latestNews } = useGlobalContext();
+  if(latestNews.length < 0) {
+    return <h1>Server issue</h1>
+  }
   return (
     <aside>
       <h2 className="tophead">
@@ -13,7 +16,7 @@ const Latest = () => {
       <div className="latest-container">
       {
         latestNews.map((item, index) => {
-          const {title, image_url, publishedAt} = item;
+          const {title,image, publishedAt} = item;
             const formatDate = Moment(publishedAt).format("MMM Do YY");
 
 
@@ -28,7 +31,7 @@ const Latest = () => {
                 </h4>
               </div>
               <div className="image">
-                <img src={image_url} alt={title} />
+                <img src={image} alt={title} />
               </div>
             </Link>
           )

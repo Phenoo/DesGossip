@@ -8,7 +8,7 @@ const LatestPosts = () => {
   const { index } = useParams();
   const {latestNews} = useGlobalContext();
   const item = latestNews[index];
-  const {title, author, description, urlToImage, publishedAt, url, content} = item;
+  const {title,  description, urlToImage, publishedAt, url, content} = item;
   const formatDate = Moment(publishedAt).format("MMM Do YY");
   console.log(formatDate);
 
@@ -31,10 +31,9 @@ const LatestPosts = () => {
           <div className="text">
             <h4>{description}</h4>
             <div className="flex-div">
-              <h6>By {author} </h6>
-              <h5>
+              <h6>
                 {publishedAt}
-              </h5>
+              </h6>
             </div>
             <div className="content">
               <p>{content}</p>

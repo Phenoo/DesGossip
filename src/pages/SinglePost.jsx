@@ -7,7 +7,7 @@ const SinglePost = () => {
   const { index } = useParams();
   const {newsdata} = useGlobalContext();
   const item = newsdata[index];
-  const {title, author, description, image, publishedAt, url, content} = item;
+  const {title, description, image, publishedAt, url, content} = item;
   const formatDate = Moment(publishedAt).format("MMM Do YY");
 
   if(item.length < 0) {
@@ -29,10 +29,9 @@ const SinglePost = () => {
           <div className="text">
             <h4>{description}</h4>
             <div className="flex-div">
-              <h6>By {author} </h6>
-              <h5>
+              <h6>
                 {formatDate}
-              </h5>
+              </h6>
             </div>
             <div className="content">
             <p>{content}</p>
