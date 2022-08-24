@@ -15,7 +15,7 @@ const Latest = () => {
       </h2>
       <div className="latest-container">
       {
-        latestNews.map((item, index) => {
+        latestNews && latestNews.map((item, index) => {
           const {title,image, publishedAt} = item;
             const formatDate = Moment(publishedAt).format("MMM Do YY");
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Opinons from './Opinons'
-import Latest from './Latest'
+// import Latest from './Latest'
 import Subscribe from './Subscribe'
 import SearchForm from './SearchForm'
 import Categories from './Categories'
@@ -18,7 +18,7 @@ const Main = () => {
       </div>
       <div className="home">
         <Opinons />
-        <Latest />
+        {/* <Latest /> */}
       </div>
     </section>
     <Subscribe />

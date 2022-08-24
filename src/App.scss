@@ -193,6 +193,9 @@ h2 {
         height: 100%;
         cursor: pointer;
         transition: all 300ms ease-in-out;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 0.3rem;
         &:hover {
             transform: scale(0.9);
             transition: all 300ms ease-in-out;

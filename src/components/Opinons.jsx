@@ -6,21 +6,20 @@ import ReactPaginate from 'react-paginate';
 import Moment from 'moment'
 
 
-
 const PER_PAGE = 10;
 
 
 const Opinons = () => {
   const [currentPage, setCurrentPage] = React.useState(0);
-  const {newsdata, loading} = useGlobalContext();
+  const {newsdata, loading, setLoading} = useGlobalContext();
+
 
   if(loading){
       return <Loading/> 
   }
-  if (newsdata.length < 10) {
-    return (
-      <Loading />
-    )
+
+  if(newsdata === undefined || newsdata.length < 0 || newsdata === null){
+    return <Loading />
   }
   const handleClick = ({selected: selectedPage}) => {
     setCurrentPage(selectedPage)
@@ -28,8 +27,8 @@ const Opinons = () => {
 
   const offset = currentPage * PER_PAGE;
 
-  const currentPageData = newsdata.slice(offset, offset + PER_PAGE).map((item, index) => {
-      const {title, author,publishedAt, description, image} = item;
+  const currentPageData = newsdata.slice(offset, offset + PER_PAGE)?.map((item, index) => {
+      const {title, publishedAt, source, description, image} = item;
       const formatDate = Moment(publishedAt).format("MMM Do YY");
 
       return (
@@ -41,7 +40,7 @@ const Opinons = () => {
               <h5>{formatDate}</h5>
               <h4>{title}</h4>
               <p>{description}</p>
-              <h6>By {author} </h6>
+              <h6>By {source.name} </h6>
             </div>
         </Link>
       )
