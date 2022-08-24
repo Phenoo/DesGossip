@@ -1,0 +1,630 @@
+$black: #121212;
+$white: #fff;
+$Poppins: "Poppins";
+$Jost: "Jost";
+a {
+    color: inherit;
+}
+
+p,
+h6 {
+    font-family: $Poppins;
+    font-size: 0.6rem;
+}
+
+h5 {
+    font-family: "Livvic";
+}
+
+h4,
+h2 {
+    font-family: $Jost;
+}
+
+h1 {
+    font-family: "Roboto";
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+button {
+    font-family: $Poppins;
+    font-size: 0.75rem;
+}
+
+nav {
+    background: $black;
+    color: $white;
+    position: relative;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    button {
+        color: $white;
+        svg {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.show {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+.nav-links {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transform: TranslateY(0%);
+    left: 0;
+    background: $black;
+    transition: all 300ms ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    li {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        font-family: "Roboto";
+        &:hover {
+            color: #ff5252;
+        }
+    }
+    .social {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        display: flex;
+        gap: 1rem;
+        svg {
+            font-size: 1rem;
+        }
+    }
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.logo {
+    font-family: 'California';
+    letter-spacing: 2px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2rem;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ddd;
+    background: #808080;
+    padding: 0.75rem;
+    border-radius: 3px;
+    svg {
+        font-size: 0.75rem;
+    }
+    input {
+        color: #fff;
+        width: 100%;
+        &::placeholder {
+            color: #ddd;
+        }
+    }
+}
+
+.btn-container {
+    display: flex;
+    gap: 0.5rem;
+    button {
+        text-transform: capitalize;
+        padding: 0.5rem;
+        border-radius: 2px;
+        color: #f1f1f1;
+        background: #f00;
+        transition: 0.3s;
+        &:hover {
+            background: #ff5252;
+        }
+    }
+}
+
+.post-container {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    .post {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        &:hover {
+            transform: scale(0.9);
+            transition: all 300ms ease-in-out;
+            h4 {
+                text-decoration: underline;
+            }
+        }
+        h5 {
+            text-transform: uppercase;
+            color: #808080;
+            font-weight: 400;
+            background: #ddd;
+            width: fit-content;
+            padding: 0 5px;
+            font-size: 0.6rem;
+            margin: 0.2rem 0;
+        }
+        h6 {
+            font-weight: 500;
+        }
+    }
+    .image {
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.singlepost {
+    padding: 1rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 60vw;
+        height: 400px;
+        object-fit: center;
+        margin: 1rem 0;
+    }
+    .text {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    h1 {
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 0.75rem;
+    }
+    h5 {
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    h6 {
+        text-transform: uppercase;
+        color: #808080;
+        font-weight: 400;
+        background: #ddd;
+        width: fit-content;
+        padding: 0 5px;
+        font-size: 0.8rem;
+    }
+    p {
+        margin-bottom: 0.25rem;
+    }
+    a {
+        font-family: "Livvic";
+        text-transform: uppercase;
+        color: #f00;
+        font-weight: 500;
+        font-size: 0.875rem;
+        transition: all 300ms ease;
+        &:hover {
+            font-weight: 800;
+            transition: all 300ms ease;
+        }
+    }
+    .flex-div {
+        margin-top: 0.7rem;
+        display: flex;
+        gap: 1rem;
+    }
+    .content {
+        margin-top: 1rem;
+    }
+}
+
+.link {
+    margin-top: 1rem;
+    .btn {
+        text-transform: capitalize;
+        padding: 0.5rem;
+        border-radius: 10px;
+        color: #f1f1f1;
+        background: #f00;
+        transition: 0.3s;
+        font-size: 0.5rem;
+        font-family: $Poppins;
+        &:hover {
+            background: #ff5252;
+        }
+    }
+}
+
+.column {
+    flex-direction: column;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-family: $Poppins;
+    text-transform: capitalize;
+    a {
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-size: 0.7rem;
+    }
+}
+
+.pagination__link--active {
+    background: #111;
+    color: #ddd;
+}
+
+.pagination__link {
+    background: #f00;
+    color: #ddd;
+}
+
+.latest-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        h4 {
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+    }
+    .text {
+        h4 {
+            font-size: 0.65rem;
+        }
+        h6 {
+            font-size: 0.5rem;
+        }
+    }
+    .image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.subscribe {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem auto;
+    img {
+        width: 300px;
+        height: 200px;
+        border-radius: 7px;
+    }
+    h4 {
+        text-transform: capitalize;
+    }
+    .outline {
+        display: flex;
+        margin-bottom: 0.5rem;
+        h5 {
+            font-family: $Poppins;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            padding: 0.2rem;
+            border: 1px solid #111;
+            cursor: pointer;
+            &:nth-last-child(2n) {
+                font-weight: 400;
+            }
+            &:hover {
+                background: #ff5252;
+            }
+        }
+    }
+    p {
+        width: 80%;
+    }
+    button {
+        background: #f00;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+        &:hover {
+            background: #ff5252;
+        }
+    }
+}
+
+footer {
+    background: $black;
+    color: #fff;
+    min-height: 40vh;
+    section {
+        padding-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        flex-wrap: wrap;
+        h6 {
+            text-transform: capitalize;
+            font-size: 1rem;
+        }
+        li {
+            font-family: $Poppins;
+            font-size: 0.65rem;
+            cursor: pointer;
+            text-transform: capitalize;
+            margin-top: 0.5rem;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    p {
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form {
+        width: 95%;
+    }
+    .home {
+        grid-template-columns: 100%;
+    }
+    .singlepost {
+        h1 {
+            font-size: 1.5rem;
+        }
+        img,
+        .text {
+            width: 80vw;
+        }
+    }
+    .latest-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .latest-post {
+        .text {
+            h4 {
+                font-size: 0.3rem;
+            }
+            h6 {
+                font-size: 0.2rem;
+            }
+        }
+        .image {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .subscribe {
+        width: 80%;
+        p {
+            font-size: 0.5rem;
+            width: 100%;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+        }
+    }
+    footer {
+        section {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    h2 {
+        font-size: 1.25rem;
+    }
+    .btn-container {
+        flex-wrap: wrap;
+    }
+    .post-container {
+        grid-template-columns: 100%;
+    }
+    .latest-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .latest-post {
+        .text {
+            h4 {
+                font-size: 0.3rem;
+            }
+            h6 {
+                font-size: 0.2rem;
+            }
+        }
+        .image {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .subscribe {
+        width: 90%;
+        h4 {
+            font-size: 0.7rem;
+        }
+    }
+    footer {
+        section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 28em) {
+    section {
+        width: 90%;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .btn-container {
+        gap: 0.25rem;
+        button {
+            text-transform: capitalize;
+            font-size: 0.5rem;
+            padding: 0.25rem;
+            &:hover {
+                background: #ff5252;
+            }
+        }
+    }
+    .post {
+        h4 {
+            font-size: 0.8rem;
+        }
+        p {
+            margin: 0.25rem 0;
+        }
+        h6 {
+            font-size: 0.5rem;
+        }
+    }
+    .singlepost {
+        img {
+            width: 90vw;
+            height: auto;
+            object-fit: contain;
+        }
+        h1 {
+            font-size: 1rem;
+        }
+        h4 {
+            font-size: 0.5rem;
+        }
+        h5 {
+            font-size: 0.5rem;
+        }
+        h6 {
+            font-size: 0.4rem;
+        }
+        a {
+            font-size: 0.7rem;
+        }
+    }
+    .latest-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .subscribe {
+        .outline {
+            h5 {
+                font-size: 0.5rem;
+            }
+        }
+        button {
+            background: #f00;
+            color: #fff;
+            font-size: 0.5rem;
+            padding: 0.35rem 0.7rem;
+            margin-top: 0.5rem;
+        }
+        width: 90%;
+        p {
+            font-size: 0.4rem;
+        }
+        img {
+            width: 100px;
+            height: 80px;
+        }
+    }
+    footer {
+        section {
+            grid-template-columns: repeat(1, 1fr);
+            h6 {
+                font-size: 0.8rem;
+            }
+            li {
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 22em) {
+    p {
+        font-size: 0.5rem;
+    }
+    .latest-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pagination {
+        gap: 0.25rem;
+        a {
+            padding: 0.1.5rem 0.3rem;
+            font-size: 0.5rem;
+        }
+    }
+}
