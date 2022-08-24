@@ -7,7 +7,7 @@ const SinglePost = () => {
   const { index } = useParams();
   const {newsdata} = useGlobalContext();
   const item = newsdata[index];
-  const {title, author, description, urlToImage, publishedAt, url, content} = item;
+  const {title, author, description, image, publishedAt, url, content} = item;
   const formatDate = Moment(publishedAt).format("MMM Do YY");
 
   if(item.length < 0) {
@@ -24,7 +24,7 @@ const SinglePost = () => {
       <div key={index} className="singlepost column">
         <h1>{title}</h1>
         <div className="image">
-          <img src={urlToImage} alt={title} />
+          <img src={image} alt={title} />
           </div>
           <div className="text">
             <h4>{description}</h4>

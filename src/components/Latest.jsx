@@ -13,7 +13,7 @@ const Latest = () => {
       <div className="latest-container">
       {
         latestNews.map((item, index) => {
-          const {title, urlToImage, publishedAt} = item;
+          const {title, image_url, publishedAt} = item;
             const formatDate = Moment(publishedAt).format("MMM Do YY");
 
 
@@ -28,7 +28,7 @@ const Latest = () => {
                 </h4>
               </div>
               <div className="image">
-                <img src={urlToImage} alt={title} />
+                <img src={image_url} alt={title} />
               </div>
             </Link>
           )
